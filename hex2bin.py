@@ -37,7 +37,7 @@ def _load(filename):
     """
     Carga un fichero Intel HEX o Motorola S-record.
     La detección es automática: por extensión primero, luego por contenido.
-    Retorna un bincopy.BinaryFile con los datos cargados.
+    Retorna un bincopy.BinFile con los datos cargados.
     """
     try:
         with open(filename, 'r', errors='replace') as f:
@@ -46,7 +46,7 @@ def _load(filename):
         sys.exit(f"No se puede abrir '{filename}': {e}")
 
     ext = os.path.splitext(filename)[1].lower()
-    bf  = bincopy.BinaryFile()
+    bf  = bincopy.BinFile()
 
     try:
         if ext in _SREC_EXT:
@@ -56,7 +56,7 @@ def _load(filename):
             try:
                 bf.add_ihex(content)
             except Exception:
-                bf = bincopy.BinaryFile()
+                bf = bincopy.BinFile()
                 bf.add_srec(content)
     except bincopy.AddressOverlapError as e:
         sys.exit(f"Registros solapados en '{filename}': {e}")
