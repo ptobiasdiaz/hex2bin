@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 hex2bin / mot2bin — Convierte Intel HEX y Motorola S-record a binario
-Port Python de hex2bin/mot2bin 2.0
+Port Python de hex2bin/mot2bin 2.0 por Tobias Diaz
 Copyright (C) 2015 Jacques Pelletier & contributors
 
 Dependencias (pip install):
