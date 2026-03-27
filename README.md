@@ -4,7 +4,6 @@
 > Copyright (C) 2015 Jacques Pelletier & contributors
 > Python port by Tobias Diaz
 
-El código fuente original en C se conserva en [`src/`](src/) para referencia.
 
 ---
 
